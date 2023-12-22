@@ -5,8 +5,8 @@ import ContactList from './ContactList/ContactList';
 import Filter from './Filter/Filter';
 
 export const App = () => {
-  const [contacts, setContacts] = useState(() =>
-    JSON.parse(localStorage.getItem('contacts'))
+  const [contacts, setContacts] = useState(
+    () => JSON.parse(localStorage.getItem('contacts')) ?? []
   );
   const [filter, setFilter] = useState('');
 
